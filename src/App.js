@@ -3,22 +3,14 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {withStyles} from 'material-ui/styles';
 import Drawer from 'material-ui/Drawer';
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
 import List from 'material-ui/List';
-import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
-import IconButton from 'material-ui/IconButton';
-import MenuIcon from 'material-ui-icons/Menu';
-import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
-import ChevronRightIcon from 'material-ui-icons/ChevronRight';
 import {mailFolderListItems, otherMailFolderListItems} from './tileData';
-import BottomNavComponent from './BottomNavComponent';
-import Menu from './Menu';
 import Button from 'material-ui/Button';
 
-import Contacts from './Contacts';
 import Desktop from './Desktop';
+import Contacts from './jur';
+
 import Dialpad from 'material-ui-icons/Dialpad';
 import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
 
@@ -81,7 +73,7 @@ const styles = theme => ({
         whiteSpace: 'nowrap',
         //filter: 'blur(5px)',
         height: '100%',
-        background: 'url(http://cs14109.vk.me/c540103/v540103025/b8b3/Dum_uBTGjfk.jpg)',
+        //background: 'url(http://cs14109.vk.me/c540103/v540103025/b8b3/Dum_uBTGjfk.jpg)',
         //background: '/346323.jpg',
         transition: theme.transitions.create('width', {
             easing: theme.transitions.easing.sharp,
@@ -147,7 +139,6 @@ class MiniDrawer extends React.Component {
                         <Divider/>
                         <List>{mailFolderListItems}</List>
                         <Divider/>
-                        <List>{otherMailFolderListItems}</List>
                     </Drawer>
                     <main className={classes.content}>
                         <Drawer

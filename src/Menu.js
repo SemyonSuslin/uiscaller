@@ -34,9 +34,7 @@ class SimpleMenu extends React.Component {
                 <div position="static" color="default"
                         aria-haspopup="true"
                         onClick={this.handleClick}>
-                      <Avatar className={classes.avatar} aria-owns={anchorEl ? 'simple-menu' : null}>
-                        SS
-                    </Avatar>
+                      <Avatar className={classes.avatar} aria-owns={anchorEl ? 'simple-menu' : null} src="https://docs.uiscom.ru/download/attachments/10682416/user-avatar"/>
                 </div>
                 <Menu
                     id="simple-menu"

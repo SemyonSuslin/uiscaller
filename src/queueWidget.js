@@ -11,6 +11,8 @@ import Contact from 'material-ui-icons/ContactPhone';
 import Phone from 'material-ui-icons/Phone';
 import CallEnd from 'material-ui-icons/CallEnd';
 
+import Typography from 'material-ui/Typography';
+
 const styles = theme => ({
     root: {
         width: '100%',
@@ -30,14 +32,23 @@ const styles = theme => ({
 
         fontSize: '15px',
         backgroundColor: '#5bb8e8'
-    }, avgTime: {
+    }, geo: {
 
         fontSize: '12px', color: 'rgba(0, 0, 0, 0.54)',
-        textAlign: 'center',
+    },
+    avgTime: {
+
+        fontSize: '12px', color: 'rgba(0, 0, 0, 0.54)',
+        textAlign: 'right'
     }, header: {
-         fontSize: '17px',
+        fontSize: '17px',
         padding: '12px 0',
         marginLeft: '24px'
+    },name: {
+        marginLeft: '10px'
+    },number: {
+        marginLeft: '8px',
+        marginRight: '8px'
     },
 });
 
@@ -48,18 +59,23 @@ function ListDividers(props) {
             <List component="nav">
                 <ListItemText className={classes.header} primary={`В очереди`}/>
                 <ListItem className={classes.devider}>
-                    <span component="div">
+                    <div>
                         Клиент
-                    </span>
+                    </div>
                     <ListItemSecondaryAction className={classes.avgTime}>
                         Среднее ожидания: <br/>
-                        3:40мин
+                        3мин
                     </ListItemSecondaryAction>
                 </ListItem>
                 <Divider/>
                 <ListItem button>
                     <Avatar alt="Remy Sharp" src="/qw.jpg"/>
-                    <ListItemText primary={`Дима Щукин`}/>
+                    <div className={classes.name}>
+                        <ListItemText primary={`Дима Щукин`}/>
+                        <Typography component="p" className={classes.geo}>
+                            Москва
+                        </Typography>
+                    </div>
                     <ListItemSecondaryAction>
                         <Button aria-label="Comments" className={classes.button}>
                             <Phone className={classes.buttonCall}/>
@@ -67,12 +83,20 @@ function ListDividers(props) {
                         <Button aria-label="Comments" className={classes.button}>
                             <CallEnd className={classes.buttonCallEnd}></CallEnd>
                         </Button>
+                        <Typography component="p" className={classes.avgTime}>
+                            2:30мин
+                        </Typography>
                     </ListItemSecondaryAction>
                 </ListItem>
                 <Divider/>
                 <ListItem button>
-                    <Contact/>
-                    <ListItemText primary={`8-999-123-44-11`}/>
+                    <Contact className={classes.number}/>
+                    <div className={classes.name}>
+                        <ListItemText primary={`8-999-123-44-11`}/>
+                        <Typography component="p" className={classes.geo}>
+                            Москва
+                        </Typography>
+                    </div>
                     <ListItemSecondaryAction>
                         <Button aria-label="Comments" className={classes.button}>
                             <Phone className={classes.buttonCall}/>
@@ -80,12 +104,20 @@ function ListDividers(props) {
                         <Button aria-label="Comments" className={classes.button}>
                             <CallEnd className={classes.buttonCallEnd}></CallEnd>
                         </Button>
+                        <Typography component="p" className={classes.avgTime}>
+                            2:30мин
+                        </Typography>
                     </ListItemSecondaryAction>
                 </ListItem>
                 <Divider/>
                 <ListItem button>
-                    <Avatar alt="Remy Sharp" src="/33.jpg"/>
-                    <ListItemText primary={`Степан Дешевых`}/>
+                    <Avatar alt="Remy Sharp" src="https://docs.uiscom.ru/download/attachments/10223853/user-avatar"/>
+                    <div className={classes.name}>
+                        <ListItemText primary={`Степан Дешевых`}/>
+                        <Typography component="p" className={classes.geo}>
+                            Москва
+                        </Typography>
+                    </div>
                     <ListItemSecondaryAction>
                         <Button aria-label="Comments" className={classes.button}>
                             <Phone className={classes.buttonCall}/>
@@ -93,12 +125,20 @@ function ListDividers(props) {
                         <Button aria-label="Comments" className={classes.button}>
                             <CallEnd className={classes.buttonCallEnd}></CallEnd>
                         </Button>
+                        <Typography component="p" className={classes.avgTime}>
+                            2:30мин
+                        </Typography>
                     </ListItemSecondaryAction>
                 </ListItem>
                 <Divider/>
                 <ListItem button>
-                    <Contact/>
-                    <ListItemText primary={`8-930-894-25-28`}/>
+                    <Contact className={classes.number}/>
+                    <div className={classes.name}>
+                        <ListItemText primary={`8-930-894-25-28`}/>
+                        <Typography component="p" className={classes.geo}>
+                            Москва
+                        </Typography>
+                    </div>
                     <ListItemSecondaryAction>
                         <Button aria-label="Comments" className={classes.button}>
                             <Phone className={classes.buttonCall}/>
@@ -106,12 +146,20 @@ function ListDividers(props) {
                         <Button aria-label="Comments" className={classes.button}>
                             <CallEnd className={classes.buttonCallEnd}></CallEnd>
                         </Button>
+                        <Typography component="p" className={classes.avgTime}>
+                            2:30мин
+                        </Typography>
                     </ListItemSecondaryAction>
                 </ListItem>
                 <Divider/>
                 <ListItem button>
-                    <Contact/>
-                    <ListItemText primary={`8-999-123-44-55`}/>
+                    <Contact className={classes.number}/>
+                    <div className={classes.name}>
+                        <ListItemText primary={`8-930-894-25-28`}/>
+                        <Typography component="p" className={classes.geo}>
+                            Москва
+                        </Typography>
+                    </div>
                     <ListItemSecondaryAction>
                         <Button aria-label="Comments" className={classes.button}>
                             <Phone className={classes.buttonCall}/>
@@ -119,6 +167,9 @@ function ListDividers(props) {
                         <Button aria-label="Comments" className={classes.button}>
                             <CallEnd className={classes.buttonCallEnd}></CallEnd>
                         </Button>
+                        <Typography component="p" className={classes.avgTime}>
+                            2:30мин
+                        </Typography>
                     </ListItemSecondaryAction>
                 </ListItem>
                 <Divider/>

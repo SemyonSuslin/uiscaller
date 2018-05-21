@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
-import QueueWidget from './queueWidget';
-import ConversationWidget from './ConversationWidget';
 import AgentsWidget from './AgentsWidget';
+import Contacts from './Contacts';
 
 const styles = theme => ({
     root: {
@@ -18,7 +17,8 @@ const styles = theme => ({
         width: '100%',
     },
     item: {
-        padding: 10
+        padding: 10,
+        height: '100%'
     },
     control: {
         padding: theme.spacing.unit * 2,
@@ -46,17 +46,13 @@ class GuttersGrid extends React.Component {
                     <Grid container className={classes.demo} justify="center" spacing={16}>
                         <Grid key='11' item xs className={classes.item}>
                             <Paper className={classes.paper}>
-                                <QueueWidget/>
+                                <Contacts/>
                             </Paper>
                         </Grid>
-                        <Grid key='12' item xs className={classes.item}>
-                            <Paper className={classes.paper}>
-                                <ConversationWidget/>
-                            </Paper>
-                        </Grid>
+
                         <Grid key='13' item xs className={classes.item}>
                             <Paper className={classes.paper}>
-                                <AgentsWidget/>
+                                Информация о человеке, сколько звонил. Есть возможность позвонить.
                             </Paper>
                         </Grid>
                     </Grid>
