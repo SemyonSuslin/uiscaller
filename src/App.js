@@ -10,8 +10,10 @@ import Button from 'material-ui/Button';
 
 import Desktop from './Desktop';
 import Contacts from './jur';
+import Widget from './widget';
 
 import Dialpad from 'material-ui-icons/Dialpad';
+import Close from 'material-ui-icons/Close';
 import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
 
 const themeb = createMuiTheme({
@@ -109,6 +111,12 @@ const styles = theme => ({
         right: 10,
         zIndex: 1234
     },
+    open: {
+        display: 'block'
+    },
+    close: {
+        display: 'none'
+    }
 });
 
 class MiniDrawer extends React.Component {
@@ -117,7 +125,7 @@ class MiniDrawer extends React.Component {
     };
 
     handleDrawerOpen = () => {
-        this.setState({open: false});
+        this.setState({open: true});
     };
 
     handleDrawerClose = () => {
@@ -131,10 +139,6 @@ class MiniDrawer extends React.Component {
                 <div className={classes.root}>
                     <Drawer
                         variant="permanent"
-                        classes={{
-                            paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
-                        }}
-                        open={this.state.open}
                     >
                         <Divider/>
                         <List>{mailFolderListItems}</List>
@@ -149,11 +153,13 @@ class MiniDrawer extends React.Component {
                         >
                             <div className={classes.contentWidget}>
                                 <Desktop/>
+                                <Widget open={this.state.open}/>
                             </div>
-
                         </Drawer>
                         <Button id='1231' variant="fab" color="secondary" aria-label="edit" className={classes.button}>
-                            <Dialpad></Dialpad>
+                            {
+                                this.state.open ? <Close onClick={this.handleDrawerClose}></Close> : <Dialpad onClick={this.handleDrawerOpen}></Dialpad>
+                            }
                         </Button>
                     </main>
                 </div>

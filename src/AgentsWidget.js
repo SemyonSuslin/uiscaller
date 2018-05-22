@@ -5,12 +5,12 @@ import List, {ListItem, ListItemText, ListSubheader, ListItemSecondaryAction} fr
 import Divider from 'material-ui/Divider';
 import Button from 'material-ui/Button';
 import Avatar from 'material-ui/Avatar';
-
+import Phone from 'material-ui-icons/Phone';
 import Typography from 'material-ui/Typography';
 
 
+
 import Contact from 'material-ui-icons/ContactPhone';
-import Phone from 'material-ui-icons/Phone';
 import CallEnd from 'material-ui-icons/CallEnd';
 
 const styles = theme => ({

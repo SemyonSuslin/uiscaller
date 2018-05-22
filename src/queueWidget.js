@@ -33,8 +33,8 @@ const styles = theme => ({
         fontSize: '15px',
         backgroundColor: '#5bb8e8'
     }, geo: {
-
-        fontSize: '12px', color: 'rgba(0, 0, 0, 0.54)',
+        fontSize: '12px',
+        color: 'rgba(0, 0, 0, 0.54)',
     },
     avgTime: {
 
