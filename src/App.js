@@ -9,8 +9,8 @@ import {mailFolderListItems, otherMailFolderListItems} from './tileData';
 import Button from 'material-ui/Button';
 
 import Desktop from './Desktop';
-import Contacts from './jur';
 import Widget from './widget';
+import WidgetInCall from './widgetInCall';
 
 import Dialpad from 'material-ui-icons/Dialpad';
 import Close from 'material-ui-icons/Close';
@@ -42,9 +42,10 @@ const styles = theme => ({
         zIndex: 1,
         overflow: 'hidden',
         position: 'relative',
-        display: 'flex',
+        display: 'flex'
     },
     contentWidget: {
+        background: 'url(./3704.jpg)',
         height: '100%',
         weight: '100%',
     },
@@ -102,7 +103,7 @@ const styles = theme => ({
     },
     content: {
         flexGrow: 1,
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: 'red',
         //padding: theme.spacing.unit * 3,
     },
     button: {
@@ -139,6 +140,10 @@ class MiniDrawer extends React.Component {
                 <div className={classes.root}>
                     <Drawer
                         variant="permanent"
+                        classes={{
+                            paper: classNames(classes.drawerPaper,  classes.drawerPaperClose),
+                        }}
+                        open={false}
                     >
                         <Divider/>
                         <List>{mailFolderListItems}</List>
@@ -153,7 +158,7 @@ class MiniDrawer extends React.Component {
                         >
                             <div className={classes.contentWidget}>
                                 <Desktop/>
-                                <Widget open={this.state.open}/>
+                                <WidgetInCall open={this.state.open}/>
                             </div>
                         </Drawer>
                         <Button id='1231' variant="fab" color="secondary" aria-label="edit" className={classes.button}>
