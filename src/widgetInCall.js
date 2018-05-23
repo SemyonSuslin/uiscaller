@@ -7,9 +7,8 @@ import Grid from 'material-ui/Grid';
 import List, {ListItem, ListItemText, ListSubheader, ListItemSecondaryAction} from 'material-ui/List';
 
 import Divider from 'material-ui/Divider';
-import InputNumber from './inputNumber.js';
 import Avatar from 'material-ui/Avatar';
-import Phone from 'material-ui-icons/Phone';
+import Phone from 'material-ui-icons/CallEnd';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import PersonAdd from 'material-ui-icons/PersonAdd';

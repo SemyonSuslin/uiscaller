@@ -13,6 +13,7 @@ import Widget from './widget';
 import WidgetInCall from './widgetInCall';
 
 import Dialpad from 'material-ui-icons/Dialpad';
+import Call from 'material-ui-icons/Call';
 import Close from 'material-ui-icons/Close';
 import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
 
@@ -163,7 +164,7 @@ class MiniDrawer extends React.Component {
                         </Drawer>
                         <Button id='1231' variant="fab" color="secondary" aria-label="edit" className={classes.button}>
                             {
-                                this.state.open ? <Close onClick={this.handleDrawerClose}></Close> : <Dialpad onClick={this.handleDrawerOpen}></Dialpad>
+                                this.state.open ? <Close onClick={this.handleDrawerClose}></Close> : <Call onClick={this.handleDrawerOpen}></Call>
                             }
                         </Button>
                     </main>
