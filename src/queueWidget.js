@@ -42,7 +42,7 @@ const styles = theme => ({
         textAlign: 'right'
     }, header: {
         fontSize: '17px',
-        padding: '12px 0',
+        padding: '33px 0',
         marginLeft: '24px'
     },name: {
         marginLeft: '10px'

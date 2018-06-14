@@ -7,8 +7,10 @@ import Button from 'material-ui/Button';
 import Avatar from 'material-ui/Avatar';
 import Phone from 'material-ui-icons/Phone';
 import Typography from 'material-ui/Typography';
+import SearchBar from 'material-ui-search-bar'
 
 
+import Input from 'material-ui/Input';
 
 import Contact from 'material-ui-icons/ContactPhone';
 import CallEnd from 'material-ui-icons/CallEnd';
@@ -39,7 +41,7 @@ const styles = theme => ({
         textAlign: 'center',
     }, header: {
         fontSize: '17px',
-        padding: '12px 0',
+        padding: '20px 0',
         marginLeft: '24px'
     }, agentItem: {
         position: 'relative'
@@ -63,7 +65,18 @@ function ListDividers(props) {
     return (
         <div className={classes.root}>
             <List component="nav">
-                <ListItemText className={classes.header} primary={`Операторы`}/>
+                <ListItem>
+                    <ListItemText className={classes.header} primary={`Операторы`}/>
+                    <SearchBar
+                        onChange={() => console.log('onChange')}
+                        placeholder="Найти оператора"
+                        onRequestSearch={() => console.log('onRequestSearch')}
+                        style={{
+                            margin: '0 auto',
+                            maxWidth: 800
+                        }}
+                    />
+                </ListItem>
                 <ListItem className={classes.devider}>
                     <span component="div">
                         В сети (3)

@@ -6,6 +6,9 @@ import Paper from 'material-ui/Paper';
 import QueueWidget from './queueWidget';
 import ConversationWidget from './ConversationWidget';
 import AgentsWidget from './AgentsWidget';
+import Divider from 'material-ui/Divider';
+
+import List, {ListItem, ListItemText, ListSubheader, ListItemSecondaryAction} from 'material-ui/List';
 
 const styles = theme => ({
     root: {
@@ -42,6 +45,80 @@ class GuttersGrid extends React.Component {
 
         return (
             <Grid container className={classes.root} spacing={16}>
+                <Grid item xs={12}>
+                    <Grid container className={classes.demo} justify="center" spacing={16}>
+                        <Grid key='11' item xs className={classes.item}>
+                            <Paper className={classes.paper}>
+                                <Grid container className={classes.demo} justify="center" spacing={16}>
+                                    <Grid key='11' item xs className={classes.item}>
+                                        <ListItem>
+                                            Всего звонков
+                                        </ListItem>
+                                        <Divider/>
+                                        <ListItem>
+                                            7
+                                        </ListItem>
+                                    </Grid>
+                                    <Grid key='11' item xs className={classes.item}>
+                                        <ListItem>
+                                            Принято
+                                        </ListItem>
+                                        <Divider/>
+                                        <ListItem>
+                                            3
+                                        </ListItem>
+                                    </Grid>
+                                    <Grid key='11' item xs className={classes.item}>
+                                        <ListItem>
+                                            Пропущено
+                                        </ListItem>
+                                        <Divider/>
+                                        <ListItem>
+                                            7
+                                        </ListItem>
+                                    </Grid>
+                                    <Grid key='11' item xs className={classes.item}>
+                                        <ListItem>
+                                            Исходящих
+                                        </ListItem>
+                                        <Divider/>
+                                        <ListItem>
+                                            3
+                                        </ListItem>
+                                    </Grid>
+                                    <Grid key='11' item xs className={classes.item}>
+                                        <ListItem>
+                                            Длительность общая
+                                        </ListItem>
+                                        <Divider/>
+                                        <ListItem>
+                                            60мин
+                                        </ListItem>
+                                    </Grid>
+                                    <Grid key='11' item xs className={classes.item}>
+                                        <ListItem>
+                                            Средняя длительность звонка
+                                        </ListItem>
+                                        <Divider/>
+                                        <ListItem>
+                                            3мин
+                                        </ListItem>
+                                    </Grid>
+                                    <Grid key='11' item xs className={classes.item}>
+                                        <ListItem>
+                                            Сделки
+                                        </ListItem>
+                                        <Divider/>
+                                        <ListItem>
+                                            3
+                                        </ListItem>
+                                    </Grid>
+                                </Grid>
+                            </Paper>
+                        </Grid>
+
+                    </Grid>
+                </Grid>
                 <Grid item xs={12}>
                     <Grid container className={classes.demo} justify="center" spacing={16}>
                         <Grid key='11' item xs className={classes.item}>

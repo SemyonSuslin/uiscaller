@@ -11,6 +11,7 @@ import Button from 'material-ui/Button';
 import Desktop from './Desktop';
 import Widget from './widget';
 import WidgetInCall from './widgetInCall';
+import Contacts from './Contacts';
 
 import Dialpad from 'material-ui-icons/Dialpad';
 import Call from 'material-ui-icons/Call';
@@ -142,7 +143,7 @@ class MiniDrawer extends React.Component {
                     <Drawer
                         variant="permanent"
                         classes={{
-                            paper: classNames(classes.drawerPaper,  classes.drawerPaperClose),
+                            paper: classNames(classes.drawerPaper, classes.drawerPaperClose),
                         }}
                         open={false}
                     >
@@ -164,7 +165,8 @@ class MiniDrawer extends React.Component {
                         </Drawer>
                         <Button id='1231' variant="fab" color="secondary" aria-label="edit" className={classes.button}>
                             {
-                                this.state.open ? <Close onClick={this.handleDrawerClose}></Close> : <Call onClick={this.handleDrawerOpen}></Call>
+                                this.state.open ? <Close onClick={this.handleDrawerClose}></Close> :
+                                    <Call onClick={this.handleDrawerOpen}></Call>
                             }
                         </Button>
                     </main>
